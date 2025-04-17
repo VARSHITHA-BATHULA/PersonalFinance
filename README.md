@@ -40,7 +40,7 @@ Connect the repository to Vercel and set the MONGODB_URI environment variable in
 Deploy the application.
 
 
-Live URL: https://your-vercel-app.vercel.app
+Live URL: 
 
 Running Tests
 npm test
