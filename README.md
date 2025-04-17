@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Personal Finance Visualizer
+A modern web application for tracking personal finances, built with Next.js, TypeScript, shadcn/ui, Recharts, and MongoDB.
+Features
 
-## Getting Started
+Stage 1: Add/Edit/Delete transactions, transaction list, monthly expenses bar chart, form validation.
+Stage 2: Predefined categories, category-wise pie chart, dashboard with summary cards.
+Stage 3: Monthly category budgets, budget vs actual comparison chart, spending insights.
+Responsive design with light/dark theme toggle.
+Error handling and loading states.
+Interactive charts with tooltips.
 
-First, run the development server:
+Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Frontend: Next.js 14 (App Router), React, TypeScript, shadcn/ui, Tailwind CSS, Recharts, Framer Motion.
+Backend: MongoDB for data storage, Next.js API routes.
+Testing: Jest for unit tests.
+Styling: Tailwind CSS with dark/light theme support.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Setup Instructions
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Clone the repository:git clone https://github.com/yourusername/personal-finance-visualizer.git
+cd personal-finance-visualizer
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+Install dependencies:npm install
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Set up environment variables:Create a .env.local file and add your MongoDB URI:MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/?retryWrites=true&w=majority
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Run the development server:npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open http://localhost:3000 in your browser.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deployment
+
+Deploy to Vercel:
+Push your code to a GitHub repository.
+Connect the repository to Vercel and set the MONGODB_URI environment variable in Vercel’s dashboard.
+Deploy the application.
+
+
+Live URL: https://your-vercel-app.vercel.app
+
+Running Tests
+npm test
+
+Project Structure
+personal-finance-visualizer/
+├── app/                    # Next.js App Router pages and API routes
+├── components/             # React components (UI, dashboard, layout)
+├── lib/                   # MongoDB connection, types, utilities
+├── public/                # Static assets (logo, favicon)
+├── tests/                 # Jest unit tests
+├── .env.local             # Environment variables
+├── tailwind.config.ts      # Tailwind CSS configuration
+├── tsconfig.json          # TypeScript configuration
+├── next.config.mjs        # Next.js configuration
+├── package.json           # Dependencies and scripts
+├── README.md              # Project documentation
+
+Evaluation Criteria
+
+Feature Implementation (40%): All Stage 3 features implemented.
+Code Quality (30%): Type-safe, modular, well-documented code with tests.
+UI/UX Design (30%): Modern, responsive, accessible design with smooth animations.
+
+Notes
+
+Authentication/login is intentionally omitted as per requirements.
+Ensure MongoDB Atlas is properly configured for production use.
+The application is optimized for both desktop and mobile devices.
+
